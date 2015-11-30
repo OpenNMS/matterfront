@@ -1,31 +1,33 @@
 {
-  "name": "matterfront",
+  "name": "opennms-chat",
   "version": "1.0.2",
-  "description": "Mattermost frontend app powered by electron",
-  "homepage": "https://github.com/lloeki/matterfront",
-  "author": "Brian Vanderbusch <brian@hackerhappyhour.com> (https://github.com/H3Chief)",
+  "description": "OpenNMS Chat",
+  "homepage": "https://github.com/OpenNMS/matterfront",
+  "author": "Benjamin Reed <ranger@opennms.org> (http://www.opennms.org)",
   "contributors": [
-    "Loic Nageleisen <loic.nageleisen@gmail.com> (http://raptu.re)"
+    "Loic Nageleisen <loic.nageleisen@gmail.com> (http://raptu.re)",
+    "Brian Vanderbusch <brian@hackerhappyhour.com> (https://github.com/H3Chief)"
   ],
   "scripts": {
     "start": "electron ./src",
-    "build": "electron-packager ./src matterfront --out=dist --ignore='^/dist$' --prune --asar --platform=all --arch=all --version=$npm_package_electronVersion --app-bundle-id='org.matterfront.app' --app-version=$npm_package_version --helper-bundle-id='org.matterfront.app.helper' --overwrite --icon=resources/opennms --sign='3rd Party Mac Developer Application: The OpenNMS Group, Inc. (N7VNY4MNDW)'"
+    "build": "electron-packager ./src 'opennms-chat' --out=dist --ignore='^/dist$' --prune --asar --platform=all --arch=all --version=$npm_package_electronVersion --app-bundle-id='org.opennms.chat' --app-version=$npm_package_version --version-string.CompanyName='The OpenNMS Group, Inc.' --version-string.ProductName='OpenNMS Chat' --version-String.InternalName='OpenNMS Chat' --helper-bundle-id='org.matterfront.app.helper' --overwrite --icon=resources/opennms"
   },
-  "electronVersion": "0.34.2",
+  "electronVersion": "0.35.2",
   "repository": {
     "type": "git",
-    "url": "https://github.com/lloeki/matterfront"
+    "url": "https://github.com/OpenNMS/matterfront"
   },
   "keywords": [
     "Mattermost",
-    "electron"
+    "electron",
+    "OpenNMS"
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/lloeki/matterfront/issues"
+    "url": "https://github.com/OpenNMS/matterfront/issues"
   },
   "devDependencies": {
-    "electron-prebuilt": "^0.34.2"
+    "electron-prebuilt": "^0.35.2"
   },
   "dependencies": {
     "electron-packager": "^5.1.1"
