@@ -4,7 +4,7 @@ var path = require('path');
 var fs = require('fs');
 // Report crashes to our server.
 
-require('crash-reporter').start();
+// require('crash-reporter').start();
 
 // Load persisted state.
 var state = {};
