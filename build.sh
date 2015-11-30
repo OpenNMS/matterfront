@@ -10,7 +10,7 @@ DISTDIR="$TOPDIR/dist"
 # The path of you app to sign.
 APP_PATH="$DISTDIR/opennms-chat-darwin-x64/opennms-chat.app"
 # The path to the location you want to put the signed package.
-RESULT_PATH="/Users/ranger/Desktop/opennms-chat.pkg"
+RESULT_PATH="$HOME/Desktop/opennms-chat.pkg"
 # The name of certificates you requested.
 APP_KEY="Developer ID Application: The OpenNMS Group, Inc. (N7VNY4MNDW)"
 INSTALLER_KEY="Developer ID Installer: The OpenNMS Group, Inc. (N7VNY4MNDW)"
