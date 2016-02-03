@@ -28,6 +28,11 @@ settings.load = function(homedir){
   nconf.argv();
   nconf.file(statePath);
   nconf.defaults(defaults);
+  nconf.overrides({
+    "teams": [{
+      "url": "https://chat.opennms.com/opennms"
+    }]
+  });
 };
 
 settings.get = function(key){

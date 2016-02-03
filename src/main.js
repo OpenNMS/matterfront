@@ -2,7 +2,7 @@ var app = require('app');
 var BrowserWindow = require('browser-window');
 var settings = require('./settings.js');
 
-// require('crash-reporter').start();
+require('crash-reporter').start();
 
 settings.load();
 

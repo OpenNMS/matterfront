@@ -10,9 +10,13 @@
 	"Chris Jaynes (https://github.com/geekytime)"
   ],
   "scripts": {
-    "start": "electron ./src",
-    "build": "electron-packager ./src 'opennms-chat' --out=dist --ignore='^/dist$' --prune --asar --platform=all --arch=all --version=$npm_package_electronVersion --app-bundle-id='org.opennms.chat' --app-version=$npm_package_version --version-string.CompanyName='The OpenNMS Group, Inc.' --version-string.ProductName='OpenNMS Chat' --version-String.InternalName='OpenNMS Chat' --helper-bundle-id='org.matterfront.app.helper' --overwrite --icon=resources/opennms"
+    "build": "electron-packager . $npm_package_productName --out=dist --ignore='^/dist$' --asar --platform=all --arch=all --version=$npm_package_electronVersion --app-bundle-id='org.opennms.chat' --app-version=$npm_package_version --helper-bundle-id='org.matterfront.app.helper' --overwrite --icon=resources/opennms --version-string.CompanyName='The OpenNMS Group, Inc.' --version-string.ProductName='OpenNMS Chat' --version-String.InternalName='OpenNMS Chat' --sign='3rd Party Mac Developer Application: The OpenNMS Group, Inc. (N7VNY4MNDW)'",
+    "lint": "eslint ./src --ignore-path .gitignore",
+    "start": "electron .",
+    "test": "mocha",
+    "watch": "mocha watch"
   },
+  "main": "./src/main.js",
   "electronVersion": "0.36.7",
   "repository": {
     "type": "git",
